@@ -1,0 +1,22 @@
+{
+  "name": "ngx-communicate",
+  "description": "Share data between any two components in an easy way",
+  "keywords": [
+    "ngx",
+    "angular",
+    "angular2",
+    "communicate",
+    "communication"
+  ],
+  "version": "1.0.0",
+  "homepage": "https://github.com/prog98rammer/ngx-communicate",
+  "license": "MIT",
+  "author": {
+    "email": "prog.khalid.mohammad@gmail.com",
+    "name": "Khalid M. Sheet"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  }
+}

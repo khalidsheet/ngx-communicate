@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-communicate": [
+        "dist/ngx-communicate"
+      ],
+      "ngx-communicate/*": [
+        "dist/ngx-communicate/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
