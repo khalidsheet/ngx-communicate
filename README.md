@@ -1,27 +1,71 @@
-# NgxLibraries
+# NgxCommunicate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+**Share data between any two components in an easy way**
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+npm i ngx-communicate
+```
 
-## Code scaffolding
+## Add the **NgxCommunicateModule** to your **AppModule**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```ts
+@NgModule({
+ ...
+  imports: [
+    ...
+    NgxCommunicateModule.forRoot()
+  ],
+  ...
+})
+export class AppModule { }
+```
 
-## Build
+## Use the Service
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+**To broadcast data**
 
-## Running unit tests
+```ts
+this.communicate.broadcast("server:start", "Server Started");
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**To receive data**
 
-## Running end-to-end tests
+```ts
+this.communicate.on("server:start", (data: any) => {
+  console.log(data);
+});
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+---
 
-## Further help
+## Example
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```ts
+import { NgxCommunicateService } from "ngx-communicate";
+
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
+})
+export class AppComponent implements OnInit {
+  constructor(private communicate: NgxCommunicateService) {}
+
+  ngOnInit() {
+    // Broadcasting a new event with it's data
+    this.communicate.broadcast("server:start", "Server Started");
+
+    // Receive the data for that event.
+    // Note: It can be used inside any other component.
+    this.communicate.on("server:start", (data: any) => {
+      console.log(data);
+    });
+  }
+}
+```
+
+### License
+
+MIT
