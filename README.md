@@ -1,6 +1,4 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0eb77784475f4ed1824fdda9ef00a0f6)](https://www.codacy.com/manual/prog98rammer/ngx-communicate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=prog98rammer/ngx-communicate&amp;utm_campaign=Badge_Grade)
-
-[![npm version](https://badge.fury.io/js/ngx-communicate.svg)](https://badge.fury.io/js/ngx-communicate)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0eb77784475f4ed1824fdda9ef00a0f6)](https://www.codacy.com/manual/prog98rammer/ngx-communicate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=prog98rammer/ngx-communicate&amp;utm_campaign=Badge_Grade) [![npm version](https://badge.fury.io/js/ngx-communicate.svg)](https://badge.fury.io/js/ngx-communicate)
 
 # NgxCommunicate
 
